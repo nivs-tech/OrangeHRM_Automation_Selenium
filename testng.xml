@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="OrangeHRM Suite" parallel="false">
+	<!-- Login tests -->
+	<test name="Login Tests">
+		<classes>
+			<class name="tests.LoginTest" />
+		</classes>
+	</test> <!--Admin module tests -->
+	<test name="Admin Tests">
+		<classes>
+			<class name="tests.AdminTest" />
+			<class name="tests.AdminSearchTest" />
+			<class name="tests.AdminEditUserTest" />
+			<class name="tests.AdminDeleteUserTest" />
+		</classes>
+	</test>
+</suite>
