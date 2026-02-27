@@ -20,30 +20,25 @@ A robust UI test automation framework for the [OrangeHRM](https://opensource-dem
 ```
 OrangeHRM_Automation_Selenium/
 │
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   └── resources/
-│   └── test/
-│       ├── java/
-│       │   ├── config/
-│       │   │   └── BaseTest.java          # WebDriver setup & teardown
-│       │   ├── pages/
-│       │   │   ├── LoginPage.java         # Login page actions & locators
-│       │   │   ├── AdminPage.java         # Admin module actions
-│       │   │   ├── AdminSearchPage.java   # Search user functionality
-│       │   │   ├── AdminEditUserPage.java # Edit user functionality
-│       │   │   └── AdminDeleteUserPage.java # Delete user functionality
-│       │   └── tests/
-│       │       ├── LoginTest.java
-│       │       ├── AdminTest.java
-│       │       ├── AdminSearchTest.java
-│       │       ├── AdminEditUserTest.java
-│       │       └── AdminDeleteUserTest.java
-│       └── resources/
+├── pages/                         # Page Object classes (package: pages)
+│   ├── LoginPage.java
+│   ├── AdminPage.java
+│   ├── AdminSearchPage.java
+│   ├── AdminEditUserPage.java
+│   └── AdminDeleteUserPage.java
 │
-├── testng.xml                             # TestNG suite configuration
-├── pom.xml                                # Maven dependencies
+├── tests/                         # TestNG test classes (package: tests)
+│   ├── LoginTest.java
+│   ├── AdminTest.java
+│   ├── AdminSearchTest.java
+│   ├── AdminEditUserTest.java
+│   └── AdminDeleteUserTest.java
+│
+├── config/
+│   └── BaseTest.java              # WebDriver setup & teardown
+│
+├── testng.xml                     # TestNG suite configuration
+├── pom.xml                        # Maven dependencies
 └── README.md
 ```
 
