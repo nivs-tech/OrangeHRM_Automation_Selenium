@@ -40,7 +40,7 @@ public class AdminSearchTest extends BaseTest {
             searchPage.clickSearch();
             int count = searchPage.getResultCount();
             Assert.assertTrue(count > 0, "Users with role Admin should be displayed");
-            System.out.println("✓ TC17 PASSED - Found " + count + " users with Admin role");
+            System.out.println(" TC17 PASSED - Found " + count + " users with Admin role");
         }
 
         // TC18: Search user by status
@@ -51,7 +51,7 @@ public class AdminSearchTest extends BaseTest {
             searchPage.clickSearch();
             int count = searchPage.getResultCount();
             Assert.assertTrue(count > 0, "Enabled users should be displayed");
-            System.out.println("✓ TC18 PASSED - Found " + count + " enabled users");
+            System.out.println(" TC18 PASSED - Found " + count + " enabled users");
         }
 
         // TC19: Reset search filters
@@ -70,7 +70,7 @@ public class AdminSearchTest extends BaseTest {
             int afterResetCount = searchPage.getResultCount();
             Assert.assertTrue(afterResetCount >= beforeResetCount,
                     "Reset should show full list (>= filtered count)");
-            System.out.println("✓ TC19 PASSED - Reset restored full list");
+            System.out.println(" TC19 PASSED - Reset restored full list");
         }
 
         // TC20: Search with partial username should not return results
@@ -82,9 +82,10 @@ public class AdminSearchTest extends BaseTest {
 
             Assert.assertTrue(searchPage.isNoRecordsFound(),
                     "Partial username should not return results");
-            System.out.println("✓ TC20 PASSED - Partial username not accepted, no records found");
+            System.out.println(" TC20 PASSED - Partial username not accepted, no records found");
         }
     }
+
 
 
 
