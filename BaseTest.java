@@ -25,7 +25,7 @@ public class BaseTest {
         driver.manage().window().maximize();
 
         login(); // fresh login before each test
-        System.out.println("✅ Driver setup and login complete");
+        System.out.println("Driver setup and login complete");
     }
 
     // Simplified login with explicit waits
@@ -37,15 +37,16 @@ public class BaseTest {
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit']"))).click();
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h6[text()='Dashboard']")));
-        System.out.println("✅ Logged in successfully");
+        System.out.println(" Logged in successfully");
     }
 
     @AfterMethod(alwaysRun = true)
     public void teardown() {
         if (driver != null) {
             driver.quit();
-            System.out.println("🔒 Driver closed after test");
+            System.out.println(" Driver closed after test");
         }
     }
 }
+
 
