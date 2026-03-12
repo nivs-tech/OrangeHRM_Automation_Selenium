@@ -122,7 +122,7 @@ public class AdminPage {
         return !driver.findElements(validationError).isEmpty();
     }
 
-    // Success toast
+    // Success message
     public boolean isSuccessMessageDisplayed() {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(successToast)).isDisplayed();
     }
@@ -140,4 +140,5 @@ public class AdminPage {
         return driver.findElements(By.xpath("//div[@class='oxd-table-card']")).size() > 0;
     }
 }
+
 
