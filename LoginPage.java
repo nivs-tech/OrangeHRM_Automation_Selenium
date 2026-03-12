@@ -50,9 +50,9 @@ public class LoginPage {
                 ExpectedConditions.visibilityOfElementLocated(requiredError)
             ));
 
-            System.out.println("✓ Login attempt completed");
+            System.out.println(" Login attempt completed");
         } catch (Exception e) {
-            System.out.println("✗ Login failed: " + e.getMessage());
+            System.out.println(" Login failed: " + e.getMessage());
             throw new RuntimeException("Login failed: " + e.getMessage());
         }
     }
@@ -62,10 +62,10 @@ public class LoginPage {
         try {
             List<WebElement> dashboardElements = driver.findElements(dashboard);
             boolean onDashboard = !dashboardElements.isEmpty() && dashboardElements.get(0).isDisplayed();
-            System.out.println(onDashboard ? "✓ On Dashboard page" : "✗ Not on Dashboard page");
+            System.out.println(onDashboard ? " On Dashboard page" : " Not on Dashboard page");
             return onDashboard;
         } catch (Exception e) {
-            System.out.println("✗ Dashboard check failed: " + e.getMessage());
+            System.out.println(" Dashboard check failed: " + e.getMessage());
             return false;
         }
     }
@@ -77,10 +77,10 @@ public class LoginPage {
             List<WebElement> loginButtons = driver.findElements(loginButton);
             boolean onLoginPage = (!loginTitles.isEmpty() && loginTitles.get(0).isDisplayed()) ||
                                   (!loginButtons.isEmpty() && loginButtons.get(0).isDisplayed());
-            System.out.println(onLoginPage ? "✓ On Login page" : "✗ Not on Login page");
+            System.out.println(onLoginPage ? " On Login page" : " Not on Login page");
             return onLoginPage;
         } catch (Exception e) {
-            System.out.println("✗ Login page check failed: " + e.getMessage());
+            System.out.println(" Login page check failed: " + e.getMessage());
             return false;
         }
     }
@@ -90,10 +90,10 @@ public class LoginPage {
         try {
             List<WebElement> errors = driver.findElements(requiredError);
             boolean errorVisible = !errors.isEmpty() && errors.get(0).isDisplayed();
-            System.out.println(errorVisible ? "✓ Required error displayed" : "✗ Required error not displayed");
+            System.out.println(errorVisible ? " Required error displayed" : " Required error not displayed");
             return errorVisible;
         } catch (Exception e) {
-            System.out.println("✗ Error check failed: " + e.getMessage());
+            System.out.println(" Error check failed: " + e.getMessage());
             return false;
         }
     }
@@ -103,11 +103,12 @@ public class LoginPage {
         try {
             List<WebElement> errors = driver.findElements(invalidCredentialsError);
             boolean errorVisible = !errors.isEmpty() && errors.get(0).isDisplayed();
-            System.out.println(errorVisible ? "✓ Invalid credentials error displayed" : "✗ Invalid credentials error not displayed");
+            System.out.println(errorVisible ? " Invalid credentials error displayed" : " Invalid credentials error not displayed");
             return errorVisible;
         } catch (Exception e) {
-            System.out.println("✗ Error check failed: " + e.getMessage());
+            System.out.println(" Error check failed: " + e.getMessage());
             return false;
         }
     }
 }
+
